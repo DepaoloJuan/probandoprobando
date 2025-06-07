@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.centroestetico.ui.agenda.SemanaController"
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding:12;">
+
+    <HBox spacing="8">
+        <Label text="Semana que comienza:"/>
+        <Label fx:id="lblLunes"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="⟵ Día"   onAction="#onVolverDia"/>
+        <Button text="Exportar" onAction="#onExportar"/>
+    </HBox>
+
+    <HBox spacing="8">
+        <Button text="⟵ Semana"  onAction="#onSemanaAnterior"/>
+        <Button text="Semana ⟶"  onAction="#onSemanaSiguiente"/>
+        <Label text="Semana que comienza:"/>
+        <Label fx:id="lblLunes"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="⟵ Día"   onAction="#onVolverDia"/>
+        <Button text="Exportar" onAction="#onExportar"/>
+    </HBox>
+
+
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colFecha"    text="Fecha"     prefWidth="90"/>
+            <TableColumn fx:id="colHora"     text="Hora"      prefWidth="70"/>
+            <TableColumn fx:id="colCliente"  text="Cliente"   prefWidth="140"/>
+            <TableColumn fx:id="colServicio" text="Servicio"  prefWidth="160"/>
+            <TableColumn fx:id="colEmpleado" text="Empleado"  prefWidth="140"/>
+            <TableColumn fx:id="colEstado"   text="Estado"    prefWidth="90"/>
+        </columns>
+    </TableView>
+</VBox>

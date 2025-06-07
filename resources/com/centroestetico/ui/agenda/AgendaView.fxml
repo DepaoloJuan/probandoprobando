@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.centroestetico.ui.agenda.AgendaController"
+      spacing="10" alignment="TOP_CENTER"
+      style="-fx-padding: 12;">
+
+    <!-- Barra de controles -->
+    <HBox spacing="8">
+        <Label text="Fecha:"/>
+        <DatePicker fx:id="datePicker" onAction="#onFechaCambiada"/>
+        <Button text="Hoy"          onAction="#onHoy"/>
+        <Button fx:id="btnVista"    text="Semana ▶" onAction="#onVerSemana"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Nuevo turno"  onAction="#onNuevoTurno"/>
+        <Button text="Exportar" onAction="#onExportarDia"/>
+        <Button text="⟵ Volver" onAction="#volverMenu"/>
+
+
+    </HBox>
+
+    <!-- Tabla de turnos -->
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colHora"      text="Hora"      prefWidth="80"/>
+            <TableColumn fx:id="colCliente"   text="Cliente"   prefWidth="140"/>
+            <TableColumn fx:id="colServicio"  text="Servicio"  prefWidth="160"/>
+            <TableColumn fx:id="colEmpleado"  text="Empleado"  prefWidth="140"/>
+            <TableColumn fx:id="colEstado"    text="Estado"    prefWidth="90"/>
+        </columns>
+    </TableView>
+</VBox>

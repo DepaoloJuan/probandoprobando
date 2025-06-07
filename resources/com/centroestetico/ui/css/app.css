@@ -1,0 +1,95 @@
+/* ---------- paleta ---------- */
+:root {
+    /* ajusta los tonos a tu gusto */
+    -color-bg-main:     #f9dfe7;
+    -color-bg-light:    #f6cddb;
+    -color-accent:      #e8a6bf;
+    -color-accent-dark: #d387a9;
+    -color-text-dark:   #4c2b36;
+    -radius: 10px;
+}
+
+/* ---------- contenedores ---------- */
+.root {
+    -fx-background-color: -color-bg-main;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ---------- Botones generales ---------- */
+.button {
+    -fx-background-color: linear-gradient(to bottom, -color-accent 0%, -color-accent-dark 100%);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 6 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 4, 0, 0, 2);
+}
+/* barra superior */
+.nav-bar {
+    -fx-padding: 12 0 16 0;
+    -fx-background-color: transparent;
+}
+
+/* pill button */
+.pill {
+    -fx-background-color: transparent;
+    -fx-border-color: -color-accent;
+    -fx-text-fill: -color-text-dark;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 6 24;
+    -fx-font-weight: bold;
+}
+.pill:hover {
+    -fx-background-color: -color-accent;
+    -fx-text-fill: white;
+}
+.pill:focused {  /* sombra suave al enfocar */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.15), 6,0,0,2);
+}
+
+.button:hover {
+    -fx-background-color: -color-accent-dark;
+}
+
+.button:pressed {
+    -fx-translate-y: 1;
+}
+
+/* Botones de navegación (si querés diferenciarlos) */
+.nav-button {
+    -fx-background-radius: 20px;   /* pills */
+}
+
+/* ---------- Títulos / headers ---------- */
+.label.heading {
+    -fx-font-size: 18;
+    -fx-text-fill: -color-text-dark;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Tabla ----------- */
+.table-view {
+    -fx-background-color: -color-bg-light;
+    -fx-border-color: -color-accent;
+    -fx-border-radius: 10px;
+}
+
+.table-view .column-header {
+    -fx-background-color: -color-accent;
+    -fx-text-fill: white;
+}
+
+/* ---------- Calendario específico ---------- */
+.calendar-grid {
+    -fx-background-color: -color-bg-light;
+    -fx-border-color: -color-accent;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.hora-cell { /* idem antes */ }
+.empleado-head { /* idem antes */ }
+.bloque-turno { /* idem antes */ }
+.celda-libre:hover { /* idem antes */ }

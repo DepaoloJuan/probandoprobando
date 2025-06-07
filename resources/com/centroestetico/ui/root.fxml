@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane fx:controller="com.centroestetico.ui.MainController"
+            xmlns:fx="http://javafx.com/fxml" prefWidth="900" prefHeight="600">
+
+    <!-- Barra superior -->
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Button text="Clientes"  onAction="#showClientes" styleClass="nav-button"/>
+            <Button text="Empleados" onAction="#showEmpleados" styleClass="nav-button"/>
+            <Button text="Servicios" onAction="#showServicios" styleClass="nav-button"/>
+            <Button text="Agenda"    onAction="#showAgenda" styleClass="nav-button"/>
+        </HBox>
+    </top>
+
+    <!-- Área central para las vistas -->
+    <center>
+        <StackPane fx:id="contentArea"/>
+    </center>
+</BorderPane>

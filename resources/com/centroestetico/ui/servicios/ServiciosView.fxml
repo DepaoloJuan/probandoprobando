@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.centroestetico.ui.servicios.ServiciosController"
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding:12;">
+
+    <!-- Formulario -->
+    <GridPane hgap="8" vgap="6">
+        <Label text="Categoría:"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtCategoria"  promptText="Categoría"  GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Descripción:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDescripcion" promptText="Descripción" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Precio ($):"  GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtPrecio"     promptText="0.00" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Botonera -->
+    <HBox spacing="10">
+        <Button text="Agregar"    onAction="#onAgregar"/>
+        <Button text="Actualizar" onAction="#onActualizar"/>
+        <Button text="Eliminar"   onAction="#onEliminar"/>
+        <Button text="⟵ Volver" onAction="#volverMenu"/>
+
+    </HBox>
+
+    <!-- Tabla -->
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colCategoria"   text="Categoría"/>
+            <TableColumn fx:id="colDescripcion" text="Descripción"/>
+            <TableColumn fx:id="colPrecio"      text="Precio"/>
+        </columns>
+    </TableView>
+</VBox>
+

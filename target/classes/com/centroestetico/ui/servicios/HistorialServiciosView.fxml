@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.centroestetico.ui.servicios.HistorialServiciosController"
+      spacing="10" styleClass="seccion">
+
+    <!-- Barra superior: título y volver -->
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Historial de Servicios" styleClass="heading"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="⟵ Volver" onAction="#onVolverMenu" styleClass="pill"/>
+    </HBox>
+
+    <!-- Tabla de historial -->
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colFecha"       text="Fecha"/>
+            <TableColumn fx:id="colDescripcion" text="Servicio"/>
+            <TableColumn fx:id="colMonto"       text="Monto"/>
+            <TableColumn fx:id="colEstado"      text="Estado"/>
+            <TableColumn fx:id="colEmpleado"    text="Empleado"/>
+        </columns>
+    </TableView>
+</VBox>

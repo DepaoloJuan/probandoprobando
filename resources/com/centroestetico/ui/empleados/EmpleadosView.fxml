@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.centroestetico.ui.empleados.EmpleadosController"
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding:12;">
+
+    <!-- - Formulario - -->
+    <GridPane hgap="8" vgap="6">
+        <Label text="Nombre:"   GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNombre"   promptText="Nombre"   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Apellido:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtApellido" promptText="Apellido" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono" promptText="Teléfono" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Porcentaje %" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtPorcentaje" promptText="Ganancia %" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!--  Botonera  -->
+    <HBox spacing="10">
+        <Button text="Agregar"       onAction="#onAgregar"/>
+        <Button text="Actualizar"    onAction="#onActualizar"/>
+        <Button text="Eliminar"      onAction="#onEliminar"/>
+        <Button text="Ver Resumen ▶" onAction="#onVerResumen"/>
+        <Button text="⟵ Volver" onAction="#volverMenu"/>
+
+    </HBox>
+
+    <!--  Tabla  -->
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNombre"     text="Nombre"/>
+            <TableColumn fx:id="colApellido"   text="Apellido"/>
+            <TableColumn fx:id="colTelefono"   text="Teléfono"/>
+            <TableColumn fx:id="colPorcentaje" text="Ganancia%"/>
+        </columns>
+    </TableView>
+</VBox>

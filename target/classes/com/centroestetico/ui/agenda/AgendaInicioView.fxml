@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.centroestetico.agenda.AgendaInicioController"
+            stylesheets="@/com/centroestetico/ui/css/app.css"
+            styleClass="root">
+
+    <!-- Zona superior con barra de navegación y selección de fecha -->
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <!-- Botones de navegación principales -->
+            <HBox spacing="10">
+                <Button text="Clientes"   onAction="#onIrClientes"  styleClass="pill"/>
+                <Button text="Empleados"  onAction="#onIrEmpleados" styleClass="pill"/>
+                <Button text="Servicios"  onAction="#onIrServicios" styleClass="pill"/>
+                <Button text="Agenda"     onAction="#onIrAgenda"    styleClass="pill"/>
+            </HBox>
+
+            <!-- Selector de fecha -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Día:" />
+                <DatePicker fx:id="datePicker" onAction="#onFechaCambiada"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Agenda en el centro -->
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true">
+            <GridPane fx:id="grid" hgap="2" vgap="2" styleClass="calendar-grid" style="-fx-padding: 10;">
+                <!-- Las celdas se llenan desde el controlador -->
+            </GridPane>
+        </ScrollPane>
+    </center>
+</BorderPane>
